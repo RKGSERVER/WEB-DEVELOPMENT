@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KBC Quiz App — Start With Name & Age</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>KBC Quiz App</h1>
+      <p>Enter your details to start. Answer 10 questions randomly selected from 50.</p>
+    </header>
+
+    <section class="start-screen" id="startScreen">
+      <form id="startForm" class="start-form">
+        <div class="field">
+          <label for="startName">Name</label>
+          <input id="startName" type="text" placeholder="Your name" required maxlength="20">
+        </div>
+        <div class="field">
+          <label for="startAge">Age</label>
+          <input id="startAge" type="number" placeholder="Your age" required min="5" max="120">
+        </div>
+        <button type="submit" class="primary big">Start Game</button>
+      </form>
+    </section>
+
+    <main class="game hidden" id="gameScreen">
+     
+      <div class="status-bar">
+        <div class="player-pill">
+          <span id="playerBadge">Player • 0 yrs</span>
+        </div>
+        <div class="progress-wrap">
+          <div id="progress" class="progress"></div>
+        </div>
+        <div class="counters">
+          <span id="questionCounter">Q1/10</span>
+          <span id="scoreCounter">Score: 0</span>
+          <span id="timer" class="timer">30s</span>
+        </div>
+      </div>
+
+    
+      <section class="question-panel">
+        <h2 id="questionText">Question will appear here</h2>
+      </section>
+
+      
+      <section class="options" id="optionsGrid"></section>
+
+      <section class="controls">
+        <button id="lockBtn" class="primary" disabled>Lock It In</button>
+        <button id="nextBtn" class="next-animated" disabled>
+          <span>Next Question</span>
+          <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button id="pauseBtn" class="secondary">Pause (1)</button>
+      </section>
+
+      
+      <section class="lifelines">
+        <button id="fiftyBtn" class="secondary">50-50 (2 left)</button>
+        <button id="resetBtn" class="secondary">Restart</button>
+      </section>
+    </main>
+
+    <section class="leaderboard" id="leaderboardSection">
+      <h3>Leaderboard</h3>
+      <ol id="leaderboardList" class="board-list">
+      
+      </ol>
+      <div class="board-actions">
+        <button id="clearBoardBtn" class="ghost">Clear Leaderboard</button><span>
+       <button id="backBtn" class="ghost">Back to Menu</button>
+
+      </div>
+    </section>
+
+    <div id="resultModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Quiz Result</h2>
+        <p id="resultSummary">You scored 0/10</p>
+        <p id="resultRemark" class="remark">Better luck next time!</p>
+        <p id="timeTakenLine" class="muted">Time taken: 0s</p>
+        <div class="modal-actions">
+          <button id="playAgainBtn" class="primary">Play Next Game</button>
+          <button id="closeModalBtn" class="ghost">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>© 2025 RKGSERVER LAB Ltd. All rights reserved.<br>Owner: - Rozario Rajkumar <br> [ KBC Quiz. Practice and improve your knowledge. ].</p>
+    </footer>
+  </div>
+
+  <template id="optionTemplate">
+    <button class="option" data-index="">
+      <span class="label"></span>
+    </button>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #60a5fa;
+  --border: #1f2937;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  background: radial-gradient(1200px 800px at 80% -10%, #1f2937 0%, var(--bg) 40%, #0b1221 100%);
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 560px;
+  background: color-mix(in oklab, var(--card) 94%, black);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+input, select, button {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0b1221;
+  color: var(--text);
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(96,165,250,0.15);
+}
+
+button {
+  background: linear-gradient(180deg, #3b82f6, #2563eb);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.03s ease, filter 0.15s ease;
+}
+
+button:hover { filter: brightness(1.05); }
+button:active { transform: translateY(1px); }
+
+#status {
+  min-height: 20px;
+  margin: 4px 2px 10px;
+  color: var(--muted);
+}
+
+.card {
+  background: #0b1221;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.hidden { display: none; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 10px 0 12px;
+}
+
+#icon {
+  width: 72px;
+  height: 72px;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.temp {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.desc {
+  color: var(--muted);
+  margin-top: 2px;
+  text-transform: capitalize;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 14px;
+  margin-top: 8px;
+}
+
+.label {
+  color: var(--muted);
+  margin-right: 6px;
+}

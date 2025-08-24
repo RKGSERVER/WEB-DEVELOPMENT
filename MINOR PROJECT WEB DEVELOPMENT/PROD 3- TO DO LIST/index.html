@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 3 — ToDo List</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>ToDo List</h1>
+      <p>DAILY WORK TRACK NOTES </p>
+    </header>
+
+    <section class="controls">
+      <input type="text" id="taskInput" placeholder="What needs to be done?" />
+      <button id="addBtn">Add</button>
+      <button id="deleteSelectedBtn" class="danger">Delete Selected</button>
+      <button id="clearAllBtn" class="ghost">Clear All</button>
+    </section>
+
+    <main>
+      <ul id="todoList" class="todo-list">
+      </ul>
+    </main>
+
+    <footer>
+      <div class="filters">
+        <button data-filter="all" class="filter active">All</button>
+        <button data-filter="active" class="filter">Active</button>
+        <button data-filter="completed" class="filter">Completed</button>
+      </div>
+      <span id="itemsLeft">0 items left</span>
+    </footer>
+  </div>
+
+  <template id="todoItemTemplate">
+    <li class="todo-item">
+      <label class="checkbox">
+        <input type="checkbox" class="toggle"/>
+        <span class="checkmark"></span>
+      </label>
+      <span class="title"></span>
+      <input type="text" class="edit-input" />
+      <div class="actions">
+        <button class="edit">Edit</button>
+        <button class="save hidden">Save</button>
+        <button class="cancel hidden">Cancel</button>
+        <button class="delete danger">Delete</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

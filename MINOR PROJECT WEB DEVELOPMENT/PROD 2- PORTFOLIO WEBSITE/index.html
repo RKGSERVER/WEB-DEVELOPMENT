@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name: Web Developer specializing in modern, accessible, high-performance websites." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="logo" href="#top" aria-label="Home">My Portfolio</a>
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+      <ul id="primary-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact" class="cta">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Theme toggle button -->
+  <button class="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
+    <span class="theme-icon" aria-hidden="true">🌙</span>
+  </button>
+
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Hi, I'm <span class="accent">Rozario Rajkumar</span></h1>
+        <p class="subtitle">Full Stack Developer • Figma UI/UX • Problem Solver</p>
+        <p class="summary">
+          We build modern, scalable, and accessible web solutions that actually work for real people — © 2025 RKGSERVER LAB Ltd.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn">See Projects</a>
+          <a href="Resume.pdf" class="btn btn-outline" download>Download Resume [ DEMO ]</a>
+        </div>
+        <div class="meta">
+          <span>Open to work</span>
+          <span>Remote & Onsite</span>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="profile.jpg" alt="Rozario Rajkumar" />
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>A little bit about who I am and what I care about.</p>
+      </div>
+      <div class="about-grid">
+        <p>
+          I'm a full-stack developer who loves building web solutions that actually make a difference. I focus on creating fast, accessible experiences that work beautifully for everyone. When I'm not coding with modern JavaScript frameworks or designing reusable components, you'll find me exploring UI/UX design, writing about tech, or contributing to open-source projects. I believe great development happens when technical skills meet thoughtful design.
+        </p>
+        <p>
+           Beyond the code, I love diving into UI design, sharing what I've discovered through blog posts, and giving back to the open-source community that's taught me so much.
+            </p>
+        <ul class="highlights">
+          <li>Accessibility-first approach</li>
+          <li>Performance-focused</li>
+          <li>Designing systems, component libraries</li>
+          <li>Clear communication and documentation work</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p>Technologies and tools I use.</p>
+      </div>
+      <div class="chips">
+        <span>HTML5</span><span>CSS3</span><span>Php</span><span>Tailwind</span><span>JavaScript</span>
+        <span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Express.js</span>
+        <span>Python</span><span>Ruby</span><span>C++</span><span>Git</span><span>Redux</span>
+        <span>Figma</span><span>Context API</span><span>Vue</span><span>Prisma</span><span>Framer Motion</span><span>FL Studio</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Selected Project, Which i'd work Recently...</p>
+      </div>
+
+      <div class="project-grid">
+        <!-- Project Card -->
+        <article class="card">
+          <img src="project1.png" alt="Project 1" />
+          <div class="card-body">
+            <h3>KBC Quiz App</h3>
+            <p>Time to put your brain to the test! Play our KBC-inspired quiz, challenge yourself with exciting questions, and see how far you can climb. Track your progress and find out if you're ready for the hot seat!</p>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JAVASCRIPT</li>
+            </ul>
+            <div class="card-actions">
+              <a href="#Private_Not_Been_Shared" aria-label="View live Project One" class="btn btn-sm">Live</a>
+              <a href="#Private_Not_Been_Shared" aria-label="View Project One code on GitHub" class="btn btn-sm btn-outline">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="project2.png" alt="Project 2" />
+          <div class="card-body">
+            <h3>ToDo List</h3>
+            <p>Keep your life organized without the hassle. Our to-do app makes it easy to track everything on your plate, whether it's big projects or daily reminders. Your tasks, simplified.</p>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JAVASCRIPT</li>
+            </ul>
+            <div class="card-actions">
+              <a href="#Private_Not_Been_Shared" class="btn btn-sm">Live</a>
+              <a href="#Private_Not_Been_Shared" class="btn btn-sm btn-outline">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="project3.png" alt="Screenshot of Project 3" />
+          <div class="card-body">
+            <h3>Simple Websites [Weather Checker]</h3>
+            <p>It's a simple website for checking the weather of diffrent cities in current time, its use a WeatherApi</p>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JAVASCRIPT</li>
+            </ul>
+            <div class="card-actions">
+              <a href="#Private_Not_Been_Shared" class="btn btn-sm">Live</a>
+              <a href="#Private_Not_Been_Shared" class="btn btn-sm btn-outline">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p>Roles, responsibilities, and outcomes.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <time datetime="2024-06">JUN 2024 - OCT 2025</time>
+          <div>
+            <h3>Full-Stack Developer Intership by LAUNCHED EDUTECH SOLUTIONS PRIVATE LIMITED</h3>
+            <p>A comprehensive Full Stack Web Development program, covering both front-end and back-end technologies.</p>
+            <ul>
+             <li>Experienced in building responsive front-end designs with HTML, CSS, JavaScript, React.js, and Bootstrap.</li>
+             <li>Skilled in back-end development using Node.js, Express.js, REST APIs, and database management with MySQL & MongoDB.</li>
+             <li>Proficient in full-stack project deployment, Git/GitHub collaboration, and applying software engineering principles.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <time datetime="2021-01">JAN 2021 - SEPT 2023</time>
+          <div>
+            <h3>MUSIC PRODUCER AND RAP ARTIST</h3>
+            <p>Produced, mixed, and mastered original tracks using FL Studio, with hands-on experience in beat making, sampling, and sound design.</p>
+            <ul>
+             <li>Produced diverse music genres (hip-hop, trap, lo-fi, experimental) with skills in beat-making, composition, and sound design.</li>
+             <li>Wrote, recorded, and mixed original rap tracks, focusing on lyrical storytelling, vocal clarity, and professional sound quality.</li>
+             <li>Released music on platforms like YouTube, SoundCloud, and Spotify, collaborating with artists while managing full production and promotion.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+  <div class="contact-card">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <p>Let's collaborate on something great.</p>
+    </div>
+    <form class="contact-form" name="contact" action="https://formsubmit.co/rkgserverlabpvt@gmail.com" method="POST">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your Name" required />
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Your Email" required />
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Rozario Rajkumar <br> © <span id="year"></span> RKGSERVER LAB Ltd.</p>
+    <ul class="social">
+      <li><a href="#Private_Not_Been_Shared" aria-label="GitHub">GitHub</a></li>
+      <li><a href="#Private_Not_Been_Shared" aria-label="LinkedIn">LinkedIn</a></li>
+      <li><a href="#Private_Not_Been_Shared" aria-label="Twitter">Twitter</a></li>
+      <!-- DEMO How it's work -->
+      <li><a href="rkgserverlabpvt@gmail.com" aria-label="Email">Email</a></li>
+    </ul>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeatherAPI.com • Simple Weather App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Weather</h1>
+
+    <form id="weather-form" autocomplete="off">
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Enter city (e.g., London)"
+        aria-label="City"
+        required
+      />
+      <select id="units-select" aria-label="Units">
+        <option value="metric" selected>Metric (°C, kph)</option>
+        <option value="imperial">Imperial (°F, mph)</option>
+      </select>
+      <button type="submit">Get Weather</button>
+    </form>
+
+    <section id="status" role="status" aria-live="polite"></section>
+
+    <section id="result" class="card hidden">
+      <div class="header">
+        <h2 id="city-name"></h2>
+        <span id="updated-time" class="muted"></span>
+      </div>
+
+      <div class="weather-main">
+        <img id="icon" alt="Weather icon" />
+        <div>
+          <div id="temp" class="temp"></div>
+          <div id="description" class="desc"></div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div><span class="label">Feels like:</span> <span id="feels-like"></span></div>
+        <div><span class="label">Humidity:</span> <span id="humidity"></span></div>
+        <div><span class="label">Wind:</span> <span id="wind"></span></div>
+        <div><span class="label">Pressure:</span> <span id="pressure"></span></div>
+      </div>
+    </section>
+
+    <footer class="muted small">
+      Data by WeatherAPI.com • Demo app for learning
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
